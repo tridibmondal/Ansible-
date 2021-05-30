@@ -1,0 +1,17 @@
+- hosts: all
+  tasks:
+  - name: Copying the script file
+    ansible.builtin.copy:
+        src: /home/tridib/script.py
+        dest: /home/tridib/ansible_work/ansible/script.py
+
+  - name: copying the csv file
+    ansible.builtin.copy:
+        src: /home/tridib/Book1.csv
+        dest: /home/tridib/ansible_work/ansible/Book1.csv
+
+
+
+
+  - name: Execute script
+    command: python3 /home/tridib/ansible_work/ansible/script.py
