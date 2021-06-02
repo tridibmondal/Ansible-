@@ -1,0 +1,7 @@
+- hosts: all
+  tasks:
+     - name: Clone a repo with separate git directory
+       ansible.builtin.git:
+         repo: https://github.com/MohdIzhar/Microservice.git
+         dest: /home/tridib/gitdocs/Microservice
+         separate_git_dir: /home/tridib/gitdocs/Microservice.git
